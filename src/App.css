@@ -1,0 +1,218 @@
+
+
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+  margin-block-end: 0;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role='list'],
+ol[role='list'] {
+  list-style: none;
+}
+
+/* Set core root defaults */
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+   scroll-behavior: auto;
+  }
+  
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+
+
+.form-wrapper {
+  display: grid;
+  grid-template-columns: max-content max-content;
+  grid-gap: 10px;
+  border: 1px solid black;
+  padding: 20px;
+  border-radius: 5px;
+}
+
+.user-list{
+  display: grid;
+  grid-template-columns: max-content max-content max-content max-content;
+  grid-gap: 40px;
+  padding: 10px;
+  margin-top: 20px;
+}
+
+.form-wrapper label {
+  text-align: right;
+}
+
+.form-wrapper input{
+ padding: 5px;
+}
+
+.form-wrapper button {
+  grid-column: span 2; 
+  justify-self: center; 
+  background-color: #04AA6D; /* Green */
+  color: white;
+  text-align: center;
+  display: inline-block;
+  border: none;
+  padding: 15px;
+  border-radius: 5px;
+}
+
+
+.user-card{
+  border: 1px solid black;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.8);
+  min-width: 250px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.user-card p{
+  font-size: 20px;
+}
+
+.user-card img{
+  border-top: transparent;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  width: 100%;
+  max-width: 250px;
+}
+
+.edit-delete-buttons{
+  display: flex;
+  justify-content: space-around;
+  margin: 16px 0px;
+}
+
+.edit{
+  background-color: #04AA6D; /* Green */
+  color: white;
+  text-align: center;
+  display: inline-block;
+  border: none;
+  padding: 15px;
+  border-radius: 5px;
+}
+
+.delete{
+  background-color: #f44336;
+  color: white;
+  text-align: center;
+  display: inline-block;
+  border: none;
+  padding: 15px;
+  border-radius: 5px;
+}
+
+.text-img{
+  display: flex;
+  flex-direction: column;
+}
+
+.nav-wrapper{
+  display: flex;
+  gap: 20px;
+  font-size: 20px;
+  padding: 20px;
+}
+
+.nav-wrapper a{
+  text-decoration: none;
+}
+
+.nav-wrapper .active{
+  font-weight: bold;
+}
+
+.user-card a{
+  color: inherit;
+}
+
+.user-open-page img{
+ width: 400px;
+}
